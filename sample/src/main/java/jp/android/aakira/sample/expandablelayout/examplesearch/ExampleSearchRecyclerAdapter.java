@@ -1,6 +1,5 @@
 package jp.android.aakira.sample.expandablelayout.examplesearch;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import androidx.recyclerview.widget.RecyclerView;
 import jp.android.aakira.sample.expandablelayout.R;
 
 public class ExampleSearchRecyclerAdapter

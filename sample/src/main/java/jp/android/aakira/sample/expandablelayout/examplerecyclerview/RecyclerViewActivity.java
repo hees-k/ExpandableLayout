@@ -3,15 +3,15 @@ package jp.android.aakira.sample.expandablelayout.examplerecyclerview;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import com.github.aakira.expandablelayout.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import jp.android.aakira.sample.expandablelayout.R;
 import jp.android.aakira.sample.expandablelayout.util.DividerItemDecoration;
 

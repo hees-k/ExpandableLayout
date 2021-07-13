@@ -3,11 +3,12 @@ package jp.android.aakira.sample.expandablelayout.expandableweight;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
 import com.github.aakira.expandablelayout.ExpandableWeightLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 import jp.android.aakira.sample.expandablelayout.R;
 
 public class ExpandableWeightActivity extends AppCompatActivity implements View.OnClickListener {

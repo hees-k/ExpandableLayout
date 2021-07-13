@@ -1,13 +1,13 @@
 package jp.android.aakira.sample.expandablelayout.main;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import jp.android.aakira.sample.expandablelayout.R;
 import jp.android.aakira.sample.expandablelayout.util.DividerItemDecoration;
 
