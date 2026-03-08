@@ -100,15 +100,18 @@ class ExpandableRecyclerViewActivity : AppCompatActivity() {
             holder.expandableLayout.setBackgroundColor(ContextCompat.getColor(context!!, item.colorId2))
             holder.expandableLayout.setInterpolator(LinearInterpolator())
             holder.expandableLayout.isExpanded = expandState.get(position)
+
+            val adapterPos = holder.adapterPosition
+
             holder.expandableLayout.setListener(object : ExpandableLayoutListenerAdapter() {
                 override fun onPreOpen() {
                     createRotateAnimator(holder.buttonLayout, 0f, 180f).start()
-                    expandState.put(position, true)
+                    expandState.put(adapterPos, true)
                 }
 
                 override fun onPreClose() {
                     createRotateAnimator(holder.buttonLayout, 180f, 0f).start()
-                    expandState.put(position, false)
+                    expandState.put(adapterPos, false)
                 }
             })
 
