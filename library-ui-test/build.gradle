@@ -3,9 +3,11 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
-    namespace "com.github.aakira.expandablelayout.test"    
+    buildToolsVersion '30.0.3'    
+    namespace "com.github.aakira.expandablelayout.uitest"    
 
     defaultConfig {
+        applicationId "com.github.aakira.expandablelayout.uitest"
         minSdkVersion MIN_SDK_VERSION
         targetSdkVersion TARGET_SDK_VERSION
         versionCode VERSION_CODE
