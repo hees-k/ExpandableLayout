@@ -42,7 +42,7 @@ publishing {
     publications {
         release(MavenPublication) {
             groupId = 'io.github.hees-k'
-            artifactId = 'ExpandableLayout'
+            artifactId = 'expandablelayout'
             version = System.getenv("RELEASE_VERSION")
             artifact("$buildDir/outputs/aar/library-release.aar")
             artifact(sourcesJar)
