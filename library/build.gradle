@@ -29,3 +29,31 @@ def getBintrayUserProperty() {
 def getBintrayApiKeyProperty() {
     return hasProperty('bintrayApiKey') ? bintrayApiKey : ""
 }
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("sources") // ✅ Gradle 7+ 호환
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'io.github.hees-k'
+            artifactId = 'ExpandableLayout'
+            version = System.getenv("RELEASE_VERSION")
+            artifact("$buildDir/outputs/aar/library-release.aar")
+            artifact(sourcesJar)
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/hees-k/forked_libraries")
+            credentials {
+                username = System.getenv("GPR_USER")
+                password = System.getenv("GPR_KEY")
+            }
+        }
+    }    
+}
