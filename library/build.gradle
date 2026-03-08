@@ -3,7 +3,7 @@ apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
-    buildToolsVersion "30.0.3"
+    buildToolsVersion BUILD_TOOLS_VERSION
     namespace "com.github.aakira.expandablelayout"
 
     defaultConfig {

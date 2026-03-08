@@ -54,12 +54,10 @@ public class ExampleReadMoreActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(final View v) {
-        switch (v.getId()) {
-            case R.id.expandButton:
-                mExpandLayout.expand();
-                mExpandButton.setVisibility(View.GONE);
-                mOverlayText.setVisibility(View.GONE);
-                break;
+        if (v.getId() == R.id.expandButton) {
+            mExpandLayout.expand();
+            mExpandButton.setVisibility(View.GONE);
+            mOverlayText.setVisibility(View.GONE);
         }
     }
 }

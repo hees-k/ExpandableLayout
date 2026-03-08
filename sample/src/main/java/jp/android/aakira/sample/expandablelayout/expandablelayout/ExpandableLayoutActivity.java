@@ -46,22 +46,17 @@ public class ExpandableLayoutActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(final View v) {
-        switch (v.getId()) {
-            case R.id.expandButton:
-                mExpandLayout.toggle();
-                break;
-            case R.id.moveChildButton:
-                mExpandLayout.moveChild(0);
-                break;
-            case R.id.moveChildButton2:
-                mExpandLayout.moveChild(1);
-                break;
-            case R.id.moveTopButton:
-                mExpandLayout.move(0);
-                break;
-            case R.id.setCloseHeightButton:
-                mExpandLayout.setClosePosition(mExpandLayout.getCurrentPosition());
-                break;
+        int id = v.getId();
+        if (id == R.id.expandButton) {
+            mExpandLayout.toggle();
+        } else if (id == R.id.moveChildButton) {
+            mExpandLayout.moveChild(0);
+        } else if (id == R.id.moveChildButton2) {
+            mExpandLayout.moveChild(1);
+        } else if (id == R.id.moveTopButton) {
+            mExpandLayout.move(0);
+        } else if (id == R.id.setCloseHeightButton) {
+            mExpandLayout.setClosePosition(mExpandLayout.getCurrentPosition());
         }
     }
 }

@@ -49,10 +49,8 @@ public class ExampleSearchActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(final View v) {
-        switch (v.getId()) {
-            case R.id.expandButton:
-                mExpandLayout.expand();
-                break;
+        if (v.getId() == R.id.expandButton) {
+            mExpandLayout.expand();
         }
     }
 }

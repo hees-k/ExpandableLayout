@@ -34,10 +34,8 @@ public class ExpandableWeightActivity extends AppCompatActivity implements View.
 
     @Override
     public void onClick(final View v) {
-        switch (v.getId()) {
-            case R.id.expandButton:
-                mExpandLayout.toggle();
-                break;
+        if (v.getId() == R.id.expandButton) {
+            mExpandLayout.toggle();
         }
     }
 }

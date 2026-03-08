@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
-    buildToolsVersion '30.0.3'    
+    buildToolsVersion BUILD_TOOLS_VERSION
     namespace "com.github.aakira.expandablelayout.uitest"
 
     compileOptions {
@@ -17,7 +17,7 @@ android {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
-    }    
+    }
 
     defaultConfig {
         applicationId "com.github.aakira.expandablelayout.uitest"

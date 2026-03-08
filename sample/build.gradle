@@ -1,9 +1,23 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
-    buildToolsVersion "30.0.3"
-    namespace "jp.android.aakira.sample.expandablelayout"    
+    buildToolsVersion BUILD_TOOLS_VERSION
+    namespace "jp.android.aakira.sample.expandablelayout"
+
+    compileOptions {
+        targetCompatibility 17
+        sourceCompatibility 17
+    }
+
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
+        }
+    }
 
     defaultConfig {
         minSdkVersion MIN_SDK_VERSION
