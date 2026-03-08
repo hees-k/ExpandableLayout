@@ -42,6 +42,8 @@ public class RecyclerViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
+        int adapterPos = holder.getAdapterPosition();
+
         final ItemModel item = data.get(position);
         holder.setIsRecyclable(false);
         holder.textView.setText(item.description);
@@ -54,13 +56,13 @@ public class RecyclerViewRecyclerAdapter extends RecyclerView.Adapter<RecyclerVi
             @Override
             public void onPreOpen() {
                 createRotateAnimator(holder.buttonLayout, 0f, 180f).start();
-                expandState.put(position, true);
+                expandState.put(adapterPos, true);
             }
 
             @Override
             public void onPreClose() {
                 createRotateAnimator(holder.buttonLayout, 180f, 0f).start();
-                expandState.put(position, false);
+                expandState.put(adapterPos, false);
             }
         });
 
