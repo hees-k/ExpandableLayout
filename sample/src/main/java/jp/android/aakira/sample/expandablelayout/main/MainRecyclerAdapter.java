@@ -33,11 +33,13 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
+        int adapterPos = holder.getAdapterPosition();
+
         holder.textView.setText(data.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                switch (position) {
+                switch (adapterPos) {
                     case 0:
                         ExpandableLayoutActivity.startActivity(context);
                         break;
