@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion "30.0.3"
+    namespace "jp.android.aakira.sample.expandablelayout"    
 
     defaultConfig {
         minSdkVersion MIN_SDK_VERSION
